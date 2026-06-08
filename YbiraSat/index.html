@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YbiraSat</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo-container">
+                <img src="./asstes/logo.svg" class="logo">
+                <div>
+                    <h1>YbiraSat</h1>
+                    <p>Nossa Floresta Vista do Espaço</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="#">Mapa</a></li>
+                    <li><a href="#">Alertas</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Relatórios</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="header">
+                <h2>Dashboard</h2>
+                <p>Inteligência Ambiental em Tempo Real</p>
+            </header>
+
+            <section class="cards">
+
+                <div class="card">
+                    <div><span class="card-value" id="total-regioes">0</span></div>
+                    <span class="card-title">Áreas Monitoradas</span>
+                    <span class="card-info">Atualização automática</span>
+                </div>
+
+                <div class="card">
+                    <div><span class="card-value" id="total-alertas">0</span></div>
+                    <span class="card-title">Alertas Ativos</span>
+                    <span class="card-info">Baseado em risco</span>
+                </div>
+
+                <div class="card">
+                    <div><span class="card-value" id="alto-risco">0</span></div>
+                    <span class="card-title">Áreas Críticas</span>
+                    <span class="card-info">Risco elevado</span>
+                </div>
+
+                <div class="card">
+                    <div><span class="card-value" id="saude">0%</span></div>
+                    <span class="card-title">Saúde Ambiental</span>
+                    <span class="card-info">Índice geral</span>
+                </div>
+
+            </section>
+
+            <section class="dashboard-grid">
+
+                <div class="map-section">
+
+                    <div class="map-header">
+                        <h3>Mapa de Monitoramento</h3>
+
+                        <div class="map-legend">
+                            <span class="l r">Crítico</span>
+                            <span class="l o">Alto</span>
+                            <span class="l y">Médio</span>
+                            <span class="l g">Baixo</span>
+                        </div>
+                    </div>
+
+                    <div id="map"></div>
+                </div>
+
+
+                <div class="alerts">
+                    <h3>Últimos Alertas</h3>
+                    <div id="alert-list"></div>
+                </div>
+
+
+                <section class="ai-section">
+
+                    <div class="ai-header">
+                        <h3>Inteligência Preditiva Ambiental</h3>
+                        <p>IA analisa padrões climáticos, térmicos e históricos em tempo real</p>
+                    </div>
+
+                    <div class="neural-grid">
+
+                        <div class="radar-box">
+
+                            <div class="radar-core">
+
+                                <div class="pulse"></div>
+                                <div class="pulse delay"></div>
+
+                                <div class="core-text">
+                                    <span id="ai-score">19%</span>
+                                    <small>Risk Index</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="orbit-panel">
+
+                            <div class="orbit-card">
+                                <h4>Região Crítica</h4>
+                                <span>Pará</span>
+                                <small>Atividade térmica elevada detectada</small>
+                            </div>
+
+                            <div class="orbit-card">
+                                <h4>Tendência Global</h4>
+                                <span>Seca crescente</span>
+                                <small>Expansão de zonas áridas</small>
+                            </div>
+
+                            <div class="orbit-card highlight">
+                                <h4>Satélite Status</h4>
+                                <span>ACTIVE</span>
+                                <small>Scan orbital em tempo real</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="chart-section">
+                    <h3>Distribuição de Risco Ambiental</h3>
+                    <canvas id="risk-chart"></canvas>
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <img src="./asstes/logo.svg" alt="YbiraSat Logo" class="footer-logo">
+            <h3>YbiraSat</h3>
+            <p>Monitoramento inteligente para um planeta mais seguro</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
